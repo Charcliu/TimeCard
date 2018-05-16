@@ -34,12 +34,24 @@ function getDaysOfCurMonth(year, month) {
   return days;
 }
 
+/**
+ * 获取当前月份第一天是星期几
+ * @param  {[type]} year  [description]
+ * @param  {[type]} month [description]
+ * @return {[type]}       [description]
+ */
 function getCurMonthFirstDayOfWeek(year, month) {
   var firstDate = new Date(year, monthArray.indexOf(month), 1);
   return firstDate.getDay();
 
 }
 
+/**
+ * 获取当前月份最后一天是星期几
+ * @param  {[type]} year  [description]
+ * @param  {[type]} month [description]
+ * @return {[type]}       [description]
+ */
 function getCurMonthLastDayOfWeek(year, month) {
   var lastDate = new Date(year, monthArray.indexOf(month), getDaysOfCurMonth(year, month));
   return lastDate.getDay();

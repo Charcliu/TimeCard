@@ -29,6 +29,12 @@
   })
 })()
 
+/**
+ * 获取日历显示数据
+ * @param  {[type]} year     [description]
+ * @param  {[type]} curMonth [description]
+ * @return {[type]}          [description]
+ */
 function showCalendarData(year, curMonth) {
   var days = getDaysOfCurMonth(year, curMonth);
   var firstDayOfWeek = getCurMonthFirstDayOfWeek(year, curMonth);
@@ -52,6 +58,13 @@ function showCalendarData(year, curMonth) {
 
 }
 
+/**
+ * 获取当月数据
+ * @param  {[type]} curDays  [description]
+ * @param  {[type]} year     [description]
+ * @param  {[type]} curMonth [description]
+ * @return {[type]}          [description]
+ */
 function getCurMonth(curDays, year, curMonth) {
   var curMonthArray = [];
   for (var i = 0; i < curDays; i++) {
@@ -60,6 +73,13 @@ function getCurMonth(curDays, year, curMonth) {
   return curMonthArray;
 }
 
+/**
+ * 获取当月往前弥补数据
+ * @param  {[type]} week     [description]
+ * @param  {[type]} year     [description]
+ * @param  {[type]} curMonth [description]
+ * @return {[type]}          [description]
+ */
 function getPreMonth(week, year, curMonth) {
   var preYear, preMonth;
   if (monthArray.indexOf(curMonth) > 0) {
@@ -77,6 +97,13 @@ function getPreMonth(week, year, curMonth) {
   return preMonthArray.reverse();
 }
 
+/**
+ * 获取当月往后弥补数据
+ * @param  {[type]} week     [description]
+ * @param  {[type]} year     [description]
+ * @param  {[type]} curMonth [description]
+ * @return {[type]}          [description]
+ */
 function getAfterMonth(week, year, curMonth) {
   var afterYear, afterMonth;
   if (monthArray.indexOf(curMonth) < 11) {
@@ -94,6 +121,13 @@ function getAfterMonth(week, year, curMonth) {
   return afterMonthArray;
 }
 
+/**
+ * 通用返回某日详细信息对象
+ * @param  {[type]} year  [description]
+ * @param  {[type]} month [description]
+ * @param  {[type]} day   [description]
+ * @return {[type]}       [description]
+ */
 function dateInfo(year, month, day) {
   var date = new Date(year, month, day);
   var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1
@@ -105,6 +139,11 @@ function dateInfo(year, month, day) {
   }
 }
 
+/**
+ * 对获取到的日期显示数据按周进行分组
+ * @param  {[type]} data [description]
+ * @return {[type]}      [description]
+ */
 function groupData(data) {
   var size = data.length / 7;
   var groupData = [];
