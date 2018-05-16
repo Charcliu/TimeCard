@@ -1,0 +1,39 @@
+.timeCard {
+  width: 1024px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.left {
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+
+.right {
+  height: 100%;
+  width: 80%;
+  float: left;
+}
+
+.curMonth {
+  background-color: red;
+}
+
+.week {
+  overflow: hidden;
+}
+
+.week>div {
+  float: left;
+  width: 14%;
+}
+
+.aDay {
+  float: left;
+  width: 14%;
+}
+
+.aWeek {
+  overflow: hidden;
+}
