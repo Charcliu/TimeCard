@@ -133,9 +133,9 @@ Calendar.prototype = {
     })
     $(".aDay0").addClass('weekend');
     $(".aDay6").addClass('weekend');
-    $(".aDay0 > div").last().addClass('redColor');
-    $(".aDay6 > div").last().addClass('redColor');
-    $(".notCurMonth > div").last().removeClass('redColor');
+    $(".aDay0 > div:nth-child(2)").addClass('redColor');
+    $(".aDay6 > div:nth-child(2)").addClass('redColor');
+    $(".notCurMonth > div").removeClass('redColor');
   }
 }
 
