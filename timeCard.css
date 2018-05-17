@@ -1,5 +1,5 @@
 .timeCard {
-  width: 1024px;
+  width: 1225px;
   height: 800px;
   margin: 0 auto;
 }
@@ -8,6 +8,7 @@
   height: 100%;
   width: 20%;
   float: left;
+  text-align: center;
 }
 
 .right {
@@ -18,22 +19,80 @@
 
 .curMonth {
   background-color: red;
+  color: #fff;
 }
 
 .week {
   overflow: hidden;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
 }
 
 .week>div {
   float: left;
-  width: 14%;
+  width: 120px;
+  margin-right: 20px;
 }
 
 .aDay {
   float: left;
-  width: 14%;
+  height: 90px;
+  width: 120px;
+  position: relative;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.aDay>div:nth-child(1) {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.aDay>div:nth-child(2) {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
 }
 
 .aWeek {
   overflow: hidden;
+}
+
+select {
+  width: 50%;
+  height: 30px;
+}
+
+#selectMonth {
+  width: 50%;
+  margin: auto;
+}
+
+#selectMonth>div {
+  overflow: hidden;
+}
+
+#selectMonth>div div {
+  float: left;
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.weekend {
+  background-color: green;
+}
+
+.redColor {
+  color: red;
+}
+
+.notCurMonth {
+  color: #999;
+  background-color: #C0FF3E;
 }
